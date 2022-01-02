@@ -16,7 +16,7 @@ $ git clone https://github.com/johbs/nsfw
 
 $ cd nsfw
 
-$ pip3 install -U -r requirements.txt
+$ pip3 install -U -r requirements.txt --no-cache-dir
 
 $ python3 -m api
 ```
