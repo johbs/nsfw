@@ -4,7 +4,6 @@ Rest API Written In Python To Classify NSFW Images.
 [![Python](http://forthebadge.com/images/badges/made-with-python.svg)](https://python.org)
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/TheHamkerCat/)
 
-<img src="https://hamker.me/r3x9rpu.png" width=200 height=200>
 
 # Fastest Solution
 
