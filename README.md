@@ -1,4 +1,4 @@
-# ✨ NSFW Classifier API ✨
+# ✨ NSFW Classifier API (simplify version) ✨
 Rest API Written In Python To Classify NSFW Images.
 
 [![Python](http://forthebadge.com/images/badges/made-with-python.svg)](https://python.org)
