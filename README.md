@@ -16,9 +16,18 @@ $ git clone https://github.com/johbs/nsfw
 
 $ cd nsfw
 
-$ pip3 install -U -r requirements.txt --no-cache-dir
+$ sudo pip3 install -U -r requirements.txt --no-cache-dir
 
-$ python3 -m api
+$ sudo python3 run.py
+
+With you want to auto start your script, you can install PM2 to Manage (the same of NodeJS)
+
+$ sudo npm install pm2 -g
+
+After Install you can add your Run.py script like this:
+
+$ sudo pm2 start run.py
+
 ```
 
 ## Classifies
