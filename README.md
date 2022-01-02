@@ -12,7 +12,7 @@ If you don't want to selfhost it, there's already an instance of this running [h
 ## Install Locally Or On A VPS
 
 ```sh
-$ git clone https://github.com/thehamkercat/NSFW_Detection_API
+$ git clone https://github.com/johbs/nsfw
 
 $ cd NSFW_Detection_API
 
