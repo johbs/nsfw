@@ -26,7 +26,7 @@ $ sudo npm install pm2 -g
 
 After Install you can add your Run.py script like this:
 
-$ sudo pm2 start run.py
+$ sudo pm2 start run.py --interpreter Python3
 
 ```
 
