@@ -14,7 +14,7 @@ If you don't want to selfhost it, there's already an instance of this running [h
 ```sh
 $ git clone https://github.com/johbs/nsfw
 
-$ cd NSFW_Detection_API
+$ cd nsfw
 
 $ pip3 install -U -r requirements.txt
 
