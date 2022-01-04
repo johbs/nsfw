@@ -3,28 +3,8 @@ from nsfw_detector import predict
 import os
 import uvicorn
 from random import randint
-import aiohttp
-import aiofiles
-
-
-app = FastAPI()
-model = predict.load_model('nsfw_detector2/nsfw_model.h5')
-PORT = 8000
-
-@app.get("/")
-async def detect_nsfw(url: str):
-    if not url:
-        return {"ERROR": "URL PARAMETER EMPTY"}
-    image = await download_image(url)
-    if not image:
-from fastapi import FastAPI
-from nsfw_detector import predict
-import os
-import uvicorn
-from random import randint
-import aiohttp
-import aiofiles
-
+from urllib.error import HTTPError
+from urllib.request import urlretrieve
 
 app = FastAPI()
 model = predict.load_model('nsfw_detector/nsfw_model.h5')
@@ -62,12 +42,13 @@ if __name__ == "__main__":
 
 async def download_image(url):
     file_name = f"{randint(6969, 6999)}.jpg"
-    async with aiohttp.ClientSession() as session:
-        async with session.get(url) as resp:
-            if resp.status == 200:
-                f = await aiofiles.open(file_name, mode='wb')
-                await f.write(await resp.read())
-                await f.close()
-            else:
-                return False
+    try:
+        urlretrieve(url, file_name)
+    except FileNotFoundError as err:
+        print(err)   # something wrong with local path
+        return False
+    except HTTPError as err:
+        print(err)  # something wrong with url
+        return False
+
     return file_name
